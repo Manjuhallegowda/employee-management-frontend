@@ -52,7 +52,7 @@ export default function ImportCSV({ onImport }) {
     formData.append('file', selectedFile);
 
     try {
-      await API.post('/employees/import', formData);
+      await API.post('/api/employees/import', formData);
       clearFile();
       onImport();
     } catch {
