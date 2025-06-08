@@ -16,7 +16,7 @@ export default function EmployeeListPage() {
 
   const fetchEmployees = async () => {
     try {
-      const res = await API.get(`/employees?search=${search}`);
+      const res = await API.get(`/api/employees?search=${search}`);
       setEmployees(res.data);
     } catch (err) {
       toast.error('Failed to fetch employees');
