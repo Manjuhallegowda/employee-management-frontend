@@ -37,7 +37,7 @@ export default function EmployeeListPage() {
 
   const confirmDelete = async () => {
     try {
-      await API.delete(`/employees/${confirmId}`);
+      await API.delete(`/api/employees/${confirmId}`);
       toast.success('Employee deleted');
       fetchEmployees();
     } catch {
