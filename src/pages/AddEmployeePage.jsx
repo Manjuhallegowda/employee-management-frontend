@@ -12,7 +12,7 @@ export default function AddEmployeePage() {
   const handleFormSubmit = async (employeeData) => {
     try {
       setIsSubmitting(true);
-      await API.post('/employees', employeeData);
+      await API.post('/api/employees', employeeData);
       toast.success('Employee saved!');
     } catch (err) {
       console.error(err);
