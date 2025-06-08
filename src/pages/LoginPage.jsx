@@ -11,7 +11,7 @@ export default function LoginPage() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await API.post('/auth/login', { username, password });
+      const res = await API.post('/api/auth/login', { username, password });
       localStorage.setItem('token', res.data.token);
       window.location.href = '/dashboard'; // smooth navigation
     } catch (err) {
