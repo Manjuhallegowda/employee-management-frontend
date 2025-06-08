@@ -48,7 +48,7 @@ export default function EditEmployeePage() {
   useEffect(() => {
     async function fetchEmployee() {
       try {
-        const res = await API.get(`/employees/${id}`);
+        const res = await API.get(`/api/employees/${id}`);
         const data = res.data;
         const initialData = {};
         fields.forEach(({ id }) => {
@@ -76,7 +76,7 @@ export default function EditEmployeePage() {
     e.preventDefault();
     setSaving(true);
     try {
-      await API.put(`/employees/${id}`, employee);
+      await API.put(`/api/employees/${id}`, employee);
       toast.success('Employee updated successfully');
       navigate('/employees');
     } catch {
