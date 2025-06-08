@@ -96,7 +96,7 @@ export default function EmployeeForm({ onAdd, editingEmployee, onCancelEdit }) {
     };
     try {
       if (editingEmployee) {
-        await API.put(`/employees/${editingEmployee._id}`, payload);
+        await API.put(`/api/employees/${editingEmployee._id}`, payload);
       } else {
         await API.post('/api/employees', payload);
       }
